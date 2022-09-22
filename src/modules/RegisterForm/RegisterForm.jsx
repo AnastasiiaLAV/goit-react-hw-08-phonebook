@@ -4,8 +4,10 @@ import { Formik} from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import { FormStyled, FieldStyled, Button, Label } from '../MyContacts/FormAddCohntacts/Form.styled';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { InitialState } from './initislState';
+import { singupUser } from 'redux/auth/auth-operations';
+import { Notify } from 'notiflix';
 
 
 const id = nanoid(5);
@@ -28,20 +30,12 @@ password: Yup.string()
 });
 
 const RegisterForm  = () => {
-    // const contacts = useSelector(getContacts);
-
-    // const dispatch = useDispatch();
-        
-    // useEffect(() => {
-    //     dispatch(fetchContacts())
-    // }, [dispatch]);
-
+    const dispatch = useDispatch();
+    
     const onRegister = (payload, { resetForm }) => {
-        // dispatch(addContacts(payload));
-        
+        Notify.success("You are signed up!");
+        dispatch(singupUser(payload));
         resetForm();
-
-        // return contacts;
     } 
 
     return (
