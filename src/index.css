@@ -1,15 +1,55 @@
-@import-normalize; /* bring in normalize.css styles */
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Orbitron', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    /* background: linear-gradient(95deg,
+      #ddda14,
+      #2c27ca);
+      height: 100vh; */
+      background: url(./img/166a86086be37dadc2603c5da398cb50.jpeg) 50% 0 no-repeat rgb(11 24 33);
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ol{
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
 }
