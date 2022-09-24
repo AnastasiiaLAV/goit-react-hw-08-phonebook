@@ -4,7 +4,7 @@ function NotFoundPage() {
     return (
         <div>
             <h2>Page not found</h2>
-            <Link to="/">Go back to main page</Link>
+            <Link to="/">We are waiting for connection with Space</Link>
         </div>
     )
     
