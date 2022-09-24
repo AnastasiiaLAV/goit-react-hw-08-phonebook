@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.24e71cd2.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.e6c69fc4.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.90a41db0.js",
     "static/js/668.d7c3cb81.chunk.js": "/goit-react-hw-08-phonebook/static/js/668.d7c3cb81.chunk.js",
     "static/js/683.50f7e16d.chunk.js": "/goit-react-hw-08-phonebook/static/js/683.50f7e16d.chunk.js",
     "static/js/305.69119cba.chunk.js": "/goit-react-hw-08-phonebook/static/js/305.69119cba.chunk.js",
-    "static/js/794.133cbf61.chunk.js": "/goit-react-hw-08-phonebook/static/js/794.133cbf61.chunk.js",
+    "static/js/794.94c39006.chunk.js": "/goit-react-hw-08-phonebook/static/js/794.94c39006.chunk.js",
     "static/js/659.d1a713be.chunk.js": "/goit-react-hw-08-phonebook/static/js/659.d1a713be.chunk.js",
     "static/media/jpeg": "/goit-react-hw-08-phonebook/static/media/166a86086be37dadc2603c5da398cb50.42b290801d3b73d9cf1a.jpeg",
     "static/media/planetMars_planet_2769.png": "/goit-react-hw-08-phonebook/static/media/planetMars_planet_2769.a15b06c8c7449f4a649b.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.24e71cd2.css.map": "/goit-react-hw-08-phonebook/static/css/main.24e71cd2.css.map",
-    "main.e6c69fc4.js.map": "/goit-react-hw-08-phonebook/static/js/main.e6c69fc4.js.map",
+    "main.90a41db0.js.map": "/goit-react-hw-08-phonebook/static/js/main.90a41db0.js.map",
     "668.d7c3cb81.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/668.d7c3cb81.chunk.js.map",
     "683.50f7e16d.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/683.50f7e16d.chunk.js.map",
     "305.69119cba.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/305.69119cba.chunk.js.map",
-    "794.133cbf61.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/794.133cbf61.chunk.js.map",
+    "794.94c39006.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/794.94c39006.chunk.js.map",
     "659.d1a713be.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/659.d1a713be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.24e71cd2.css",
-    "static/js/main.e6c69fc4.js"
+    "static/js/main.90a41db0.js"
   ]
 }

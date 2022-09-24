@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[794],{1794:function(e,n,o){o.r(n);var t=o(1087),c=o(184);n.default=function(){return(0,c.jsxs)("div",{children:[(0,c.jsx)("h2",{children:"Page not found"}),(0,c.jsx)(t.rU,{to:"/",children:"We are waiting for connection with Space"})]})}}}]);
+//# sourceMappingURL=794.94c39006.chunk.js.map
