@@ -4,8 +4,10 @@ import { Formik} from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import { FormStyled, FieldStyled, Button, Label } from '../MyContacts/FormAddCohntacts/Form.styled';
-// import { useDispatch, useSelector } from 'react-redux';
 import { InitialState } from './initislState';
+import { loginUser} from 'redux/auth/auth-operations';
+import { useDispatch } from 'react-redux';
+import { Notify } from 'notiflix';
 
 
 const id = nanoid(5);
@@ -23,20 +25,12 @@ password: Yup.string()
 });
 
 const LoginForm  = () => {
-    // const contacts = useSelector(getContacts);
-
-    // const dispatch = useDispatch();
-        
-    // useEffect(() => {
-    //     dispatch(fetchContacts())
-    // }, [dispatch]);
+    const dispatch = useDispatch();
 
     const onLogin = (payload, { resetForm }) => {
-        // dispatch(addContacts(payload));
-        
+        Notify.success("I salute you earthling!");
+        dispatch(loginUser(payload));
         resetForm();
-
-        // return contacts;
     } 
 
     return (
@@ -54,7 +48,9 @@ const LoginForm  = () => {
             id={id}
             type="email"
             name="email"
-            placeholder="enter email" />
+            placeholder="enter email" 
+            autoComplete="on"
+            />
         {errors.email && touched.email ? (
             <div>{errors.email}</div>
         ) : null}
@@ -68,7 +64,7 @@ const LoginForm  = () => {
         {errors.password && touched.password ? (
             <div>{errors.password}</div>
         ) : null}
-        <Button type="submit">Log in</Button>
+        <Button type="submit">Login</Button>
         </FormStyled>
     )}
     </Formik>

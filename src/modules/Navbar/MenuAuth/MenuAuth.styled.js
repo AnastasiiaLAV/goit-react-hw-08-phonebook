@@ -16,7 +16,8 @@ border-radius: 5px;
     &:hover{
         text-shadow: 4px 1px 5px #f7063be6;
         color: #fff;
-        font-size: 28px;
+        transition: 0.3s ease-out;
+        transform: scale(1.09);
     }
     &.active{
         background-color: #eb1052;

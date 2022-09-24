@@ -19,39 +19,38 @@ export const singupUser = createAsyncThunk(
     }
 );
 
-// export const addContacts = createAsyncThunk(
-//     "contacts/add",
-//     async(data, {rejectWithValue}) =>{
-//         try{
-//             const result = await api.addContacts(data);
-//             return result;
-//         }
-//         catch(error){
-//             return rejectWithValue(error);
-//         }
-//     },
-//     {
-//         condition: (data, {getState}) =>{
-//             const {contacts} = getState();
-//             if(doubleСontacts(data, contacts.items)){
-//                 Notify.warning(`${data.name.toUpperCase()} contact already exists`);
-//                 return false;
-//             }
-//         }
-//     }
-// );
+export const loginUser = createAsyncThunk(
+    "auth/login",
+    async(data, {rejectWithValue}) => {
+        try{
+            const result = await apiAuth.login(data);
+            return result;
+        } catch({response}){
+            const {status, data} = response;
+            const error = {
+                status,
+                message: data.message,
+            }
+            return rejectWithValue(error);
+        }
+    }
+);
 
-// export const removeContacts = createAsyncThunk(
-//     "contacts/remove",
-//     async(id, {rejectWithValue}) =>{
-//         try{
-//             await api.removeContacts(id);
-//             return id;
-//         }
-//         catch(error){
-//             return rejectWithValue(error);
-//         }
-//     }
-// );
+export const logoutUser = createAsyncThunk(
+    "auth/logout",
+    async(_, {rejectWithValue}) => {
+        try{
+            const result = await apiAuth.logout();
+            return result;
+        } catch({response}){
+            const {status, data} = response;
+            const error = {
+                status,
+                message: data.message,
+            }
+            return rejectWithValue(error);
+        }
+    }
+);
 
 

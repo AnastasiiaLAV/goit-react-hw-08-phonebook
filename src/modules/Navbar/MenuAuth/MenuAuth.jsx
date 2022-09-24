@@ -4,11 +4,11 @@ import { MenuAuthNavLink } from "./MenuAuth.styled";
 
 const MenuAuth = () => {
     return (
-        <div>
+        <>
             <MenuAuthNavLink  to="/register">Register</MenuAuthNavLink>
-            |
+            or
             <MenuAuthNavLink to="/login">Login</MenuAuthNavLink>
-        </div>
+        </>
     );
 }
 

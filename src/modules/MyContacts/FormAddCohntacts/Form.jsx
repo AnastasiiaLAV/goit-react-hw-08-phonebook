@@ -15,7 +15,7 @@ name: Yup.string()
     .max(15, 'Too Long!')
     .required('Please enter a name')
     .matches(/^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/, "Must be only letters"),
-phone: Yup.string()
+number: Yup.string()
     .min(5, 'Too Short!')
     .max(10, 'Too Long!')
     .required('Please enter a number')
@@ -43,7 +43,7 @@ const ContactForm  = () => {
         <Formik
             initialValues={{
                 name: '',
-                phone: '',
+                number: '',
             }}
             validationSchema={SignupSchema}
             onSubmit={onAddContact}
@@ -56,19 +56,23 @@ const ContactForm  = () => {
             id={id}
             type="text"
             name="name"
-            placeholder="enter name"/>
+            placeholder="enter name"
+            autoComplete="on"
+            />
         {errors.name && touched.name ? (
             <div>{errors.name}</div>
         ) : null}
         
-        <Label htmlFor="phone">Phone</Label>
+        <Label htmlFor="number">Phone</Label>
         <FieldStyled
             id={id}
             type="phone"
-            name="phone"
-            placeholder="enter number" />
-        {errors.phone && touched.phone ? (
-            <div>{errors.phone}</div>
+            name="number"
+            placeholder="enter number" 
+            autoComplete="on"
+            />
+        {errors.number && touched.number ? (
+            <div>{errors.number}</div>
         ) : null}
         
         <Button type="submit">Add contact</Button>

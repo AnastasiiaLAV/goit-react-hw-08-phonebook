@@ -4,16 +4,14 @@
 
 body {
   margin: 0;
+  padding: 20px;
   font-family: 'Orbitron', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    /* background: linear-gradient(95deg,
-      #ddda14,
-      #2c27ca);
-      height: 100vh; */
-      background: url(./img/166a86086be37dadc2603c5da398cb50.jpeg) 50% 0 no-repeat rgb(11 24 33);
-      background-repeat: no-repeat;
-      background-size: cover;
+  background: url(./img/166a86086be37dadc2603c5da398cb50.jpeg) 50% 0 no-repeat rgb(11 24 33);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }
 
 img {

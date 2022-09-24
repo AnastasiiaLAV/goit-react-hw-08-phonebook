@@ -1,7 +1,6 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const MenuNavLink = styled(NavLink)`
+export const MenuUserBtn = styled.button`
 margin: 10px;
 display: inline-block;
 justify-content: center;
@@ -10,6 +9,8 @@ font-family: 'Rubik Dirt', cursive;
 font-size: 26px;
 font-weight: 400;
 text-decoration: none;
+background: none;
+border: none;
 color: #fff;
 padding: 10px 20px;
 border-radius: 5px;

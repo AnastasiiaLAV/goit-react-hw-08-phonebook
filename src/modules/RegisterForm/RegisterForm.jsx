@@ -33,7 +33,7 @@ const RegisterForm  = () => {
     const dispatch = useDispatch();
     
     const onRegister = (payload, { resetForm }) => {
-        Notify.success("You are signed up!");
+        Notify.success(`"I salute you earthling ${payload.name.toUpperCase()}!"`);
         dispatch(singupUser(payload));
         resetForm();
     } 
@@ -62,7 +62,9 @@ const RegisterForm  = () => {
             id={id}
             type="email"
             name="email"
-            placeholder="enter email" />
+            placeholder="enter email"
+            autoComplete="on"
+            />
         {errors.email && touched.email ? (
             <div>{errors.email}</div>
         ) : null}

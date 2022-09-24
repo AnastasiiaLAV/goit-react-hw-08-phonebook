@@ -2,8 +2,8 @@ import * as api from "helper/api";
 import { Notify } from "notiflix";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const doubleСontacts = ({name, phone}, contacts) =>{
-    const dublicate = contacts.find(item => item.name.toLowerCase() === name.toLowerCase() || item.phone === phone);
+const doubleСontacts = ({name, number}, contacts) =>{
+    const dublicate = contacts.find(item => item.name.toLowerCase() === name.toLowerCase() || item.number === number);
     return Boolean(dublicate);
 } 
 
@@ -12,7 +12,6 @@ export const fetchContacts = createAsyncThunk(
     async(_, thunkAPI) => {
         try{
             const data = await api.getContacts();
-            console.log('data', data)
             return data;
         } catch(error){
             return thunkAPI.rejectWithValue(error);
