@@ -20,7 +20,7 @@ const authSlice = createSlice({
         },
         [singupUser.fulfilled]: (store, {payload}) => {
             store.loading = false;
-            store.uesr = payload.user;
+            store.user = payload.user;
             store.token = payload.token;
             store.isLogin = true;
         },
@@ -35,7 +35,7 @@ const authSlice = createSlice({
         },
         [loginUser.fulfilled]: (store, {payload}) => {
             store.loading = false;
-            store.uesr = payload.user;
+            store.user = payload.user;
             store.token = payload.token;
             store.isLogin = true;
         },
@@ -50,7 +50,7 @@ const authSlice = createSlice({
         },
         [logoutUser.fulfilled]: (store) => {
             store.loading = false;
-            store.uesr = {};
+            store.user = {};
             store.token = '';
             store.isLogin = false;
         },
@@ -65,7 +65,7 @@ const authSlice = createSlice({
         },
         [currentUser.fulfilled]: (store, {payload}) => {
             store.loading = false;
-            store.uesr = payload;
+            store.user = payload;
             store.isLogin = true;
         },
         [currentUser.rejected]: (store, {payload}) => {

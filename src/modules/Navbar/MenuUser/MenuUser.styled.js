@@ -1,5 +1,24 @@
 import styled from "styled-components";
 
+export const MenuUserWrapp = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+`
+export const MenuUserName = styled.span`
+    text-align: center;
+font-family: 'Rubik Dirt', cursive;
+font-size: 28px;
+font-weight: 400;
+text-decoration: none;
+background: none;
+border: none;
+color: #fff;
+padding: 10px;
+border-radius: 5px;
+    
+`
+
 export const MenuUserBtn = styled.button`
 margin: 10px;
 display: inline-block;

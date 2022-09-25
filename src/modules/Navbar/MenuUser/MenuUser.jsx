@@ -1,25 +1,26 @@
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "redux/auth/auth-operations";
 import { getUser } from "redux/selectors";
-import { MenuUserBtn } from "./MenuUser.styled";
+import { MenuUserBtn, MenuUserName, MenuUserWrapp } from "./MenuUser.styled";
+import svg from './sprite.svg'
 
-// import * as icon from '../../../img/sprite.svg';
+const svgAdress = svg + "#icon-user";
 
 const MenuUser = () => {
     const {name} = useSelector(getUser);
-    console.log('name', name)
+
     const dispatch = useDispatch();
 
     const onLogOut = () => dispatch(logoutUser());
 
     return (
         <>
-        <div>
-            {/* <svg width="35" height="35">
-                <use href = "${icon}#icon-user"></use>
-            </svg> */}
-            <span>{name}</span>
-        </div>
+        <MenuUserWrapp>
+            <svg width="70" height="70">
+                <use href={svgAdress} />
+            </svg>
+            <MenuUserName>Hello, {name.toUpperCase()}</MenuUserName>
+        </MenuUserWrapp>
         <MenuUserBtn type="button" onClick={onLogOut}>LogOut</MenuUserBtn>
         </>
     );

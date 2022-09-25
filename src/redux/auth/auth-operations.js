@@ -24,6 +24,7 @@ export const loginUser = createAsyncThunk(
     async(data, {rejectWithValue}) => {
         try{
             const result = await apiAuth.login(data);
+            console.log('result', result.user.name)
             return result;
         } catch({response}){
             const {status, data} = response;
@@ -59,7 +60,8 @@ export const currentUser = createAsyncThunk(
         try{
             const {auth} = getState()
             const result = await apiAuth.current(auth.token);
-            return result;
+            // return result;
+            return { ...result, token: auth.token };
         } catch({response}){
             const {status, data} = response;
             const error = {
